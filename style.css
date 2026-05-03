@@ -1,0 +1,220 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* Навігація */
+nav {
+    background: linear-gradient(90deg, #ff6b35, #f7c531);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+nav a {
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+/* Головний контент */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/* Герой-секція */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 107, 53, 0.2) 0%, transparent 100%);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #ff6b35, #f7c531);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.hero p {
+    font-size: 1.3rem;
+    color: #b8b8d1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Картки */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+.card {
+    background: linear-gradient(145deg, #252547, #1e1e3f);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b35;
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+.card h3 {
+    color: #f7c531;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.card p {
+    color: #b8b8d1;
+    margin-bottom: 0.5rem;
+}
+/* Бейджі рідкості */
+.rarity {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.rarity-common { background: #8bc34a; color: #1a1a2e; }
+.rarity-rare { background: #2196f3; color: #fff; }
+.rarity-super-rare { background: #9c27b0; color: #fff; }
+.rarity-epic { background: #673ab7; color: #fff; }
+.rarity-mythic { background: #e91e63; color: #fff; }
+.rarity-legendary { background: linear-gradient(90deg, #ffd700, #ff8c00); color: #1a1a2e; }
+.rarity-chromatic { background: linear-gradient(90deg, #ff6b35, #f7c531, #4caf50); color: #1a1a2e; }
+/* Статистика */
+.stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.stat-label {
+    color: #888;
+    font-size: 0.8rem;
+}
+/* Факти */
+.fact-card {
+    background: linear-gradient(145deg, #2d2d5a, #252547);
+    border-left: 4px solid #f7c531;
+}
+.fact-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6b35;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+.fact-card {
+    position: relative;
+    overflow: hidden;
+}
+/* Секції */
+section {
+    margin-bottom: 3rem;
+}
+section h2 {
+    font-size: 2rem;
+    color: #f7c531;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ff6b35;
+    display: inline-block;
+}
+/* Футер */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+    color: #888;
+}
+footer a {
+    color: #f7c531;
+    text-decoration: none;
+}
+/* Теги класів персонажів */
+.class-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255, 107, 53, 0.2);
+    border: 1px solid #ff6b35;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #ff6b35;
+    margin-right: 0.5rem;
+}
+/* Опис здібностей */
+.abilities {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.abilities h4 {
+    color: #ff6b35;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+.abilities p {
+    font-size: 0.9rem;
+}
+/* Адаптивність */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
